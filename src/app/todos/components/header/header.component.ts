@@ -1,5 +1,5 @@
 import { Component, Inject } from "@angular/core";
-import { TodoService } from "../../services/todos.service";
+import { TodosService } from "../../services/todos.service";
 
 
 @Component({
@@ -9,7 +9,7 @@ import { TodoService } from "../../services/todos.service";
 export class HeaderComponent {
     text: string = '';
 
-    constructor(private todoService: TodoService) {
+    constructor(private todoService: TodosService) {
     }
     
 

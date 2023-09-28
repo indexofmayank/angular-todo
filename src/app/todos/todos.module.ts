@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { TodosComponent } from './components/todos/todos.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
-import { TodoService } from './services/todos.service';
+import { TodosService } from './services/todos.service';
 import { MainComponent } from './components/main/main.component';
 import { CommonModule } from '@angular/common';
 import { TodoComponent } from './components/todo/todo.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {
@@ -15,10 +16,10 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [TodosComponent, HeaderComponent, MainComponent, TodoComponent],
+  declarations: [TodosComponent, HeaderComponent, MainComponent, TodoComponent, FooterComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)],
-  providers: [TodoService]
+  providers: [TodosService]
 })
 export class TodosModule { }
